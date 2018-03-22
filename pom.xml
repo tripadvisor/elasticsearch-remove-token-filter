@@ -7,7 +7,7 @@
     <artifactId>elasticsearch-remove</artifactId>
     <version>1.2.0</version>
     <packaging>jar</packaging>
-    <description>A customized token filter that drops token completely from the token stream including its token position</description>
+    <description>A customized token filter that drops stop word tokens completely from the token stream including their token positions</description>
     <inceptionYear>2018</inceptionYear>
 
     <licenses>
