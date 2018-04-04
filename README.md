@@ -86,7 +86,7 @@ Customized stop word filter will generate a token stream as followings:
  for strict phrase match (slop = 0), 'X' means matching:
  
 | Query  | Build-in Stop Filter | Customized Stop Filter |
-| ------------- | ------------- |
+| ------------- | ------------- | ------------- |
 | Hotels pres de la tour eiffel  | X | X |
 | Hotels pres de le tour eiffel | X | X | 
 | Hotels pres des le tour eiffel | X | X | 
