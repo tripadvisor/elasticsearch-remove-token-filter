@@ -12,7 +12,6 @@ public class RemoveTokenFilter extends TokenFilter {
 
     private final CharArraySet stopWords;
     private boolean skippedPositions;
-    private int currentStartOffset;
 
 
     private final PositionIncrementAttribute posIncrAtt = addAttribute(PositionIncrementAttribute.class);
@@ -28,38 +27,19 @@ public class RemoveTokenFilter extends TokenFilter {
         return !stopWords.contains(termAtt.buffer(), 0, termAtt.length());
     }
 
-    // TODO: get start and end offsets right!!!
     @Override
-    public final boolean incrementToken() throws IOException {
-        skippedPositions = false;
+    public final boolean incrementToken() throws IOException
+    {
 
         while (input.incrementToken())
         {
-            if (accept()) {
-
-                if (skippedPositions)
-                {
-                    posIncrAtt.setPositionIncrement(posIncrAtt.getPositionIncrement());
-                }
-
+            if (accept())
+            {
                 return true;
             }
-            skippedPositions = true;
         }
 
         // reached EOS -- return false
         return false;
-    }
-
-    @Override
-    public void reset() throws IOException {
-        super.reset();
-        skippedPositions = false;
-    }
-
-    @Override
-    public void end() throws IOException {
-        super.end();
-        posIncrAtt.setPositionIncrement(posIncrAtt.getPositionIncrement());
     }
 }

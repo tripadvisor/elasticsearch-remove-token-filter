@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <name>elasticsearch-remove</name>
+    <name>elasticsearch-remove-stop-word</name>
     <modelVersion>4.0.0</modelVersion>
     <groupId>elasticsearch.remove</groupId>
     <artifactId>elasticsearch-remove</artifactId>

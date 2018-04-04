@@ -9,14 +9,10 @@ import org.elasticsearch.index.IndexSettings;
 import org.elasticsearch.index.analysis.AbstractTokenFilterFactory;
 import org.elasticsearch.index.analysis.Analysis;
 
-import java.util.Set;
-
 public class RemoveTokenFilterFactory extends AbstractTokenFilterFactory {
 
     private final CharArraySet stopWords;
-
     private final boolean ignoreCase;
-
 
     public RemoveTokenFilterFactory(IndexSettings indexSettings, Environment env, String name, Settings settings) {
         super(indexSettings, name, settings);
@@ -27,13 +23,5 @@ public class RemoveTokenFilterFactory extends AbstractTokenFilterFactory {
     @Override
     public TokenStream create(TokenStream tokenStream) {
         return new RemoveTokenFilter(tokenStream, stopWords);
-    }
-
-    public Set<?> stopWords() {
-        return stopWords;
-    }
-
-    public boolean ignoreCase() {
-        return ignoreCase;
     }
 }
