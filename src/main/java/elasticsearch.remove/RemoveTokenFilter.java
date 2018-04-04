@@ -18,7 +18,6 @@ public class RemoveTokenFilter extends TokenFilter {
 
     private final PositionIncrementAttribute posIncrAtt = addAttribute(PositionIncrementAttribute.class);
     private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
-    private final OffsetAttribute offsetAtt = addAttribute(OffsetAttribute.class);
 
     public RemoveTokenFilter(TokenStream in, CharArraySet stopWords)
     {
@@ -38,19 +37,12 @@ public class RemoveTokenFilter extends TokenFilter {
         while (input.incrementToken())
         {
             if (accept()) {
-                int endOffset = currentStartOffset + termAtt.length();
 
                 if (skippedPositions)
                 {
                     posIncrAtt.setPositionIncrement(posIncrAtt.getPositionIncrement());
-                    offsetAtt.setOffset(currentStartOffset, endOffset);
-                }
-                else
-                {
-                    offsetAtt.setOffset(currentStartOffset, endOffset);
                 }
 
-                currentStartOffset = endOffset + 1;
                 return true;
             }
             skippedPositions = true;
@@ -64,7 +56,6 @@ public class RemoveTokenFilter extends TokenFilter {
     public void reset() throws IOException {
         super.reset();
         skippedPositions = false;
-        currentStartOffset = 0;
     }
 
     @Override
