@@ -12,7 +12,6 @@ public class RemoveTokenFilter extends TokenFilter {
 
     private final CharArraySet stopWords;
 
-    private final PositionIncrementAttribute posIncrAtt = addAttribute(PositionIncrementAttribute.class);
     private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);
 
     public RemoveTokenFilter(TokenStream in, CharArraySet stopWords)
