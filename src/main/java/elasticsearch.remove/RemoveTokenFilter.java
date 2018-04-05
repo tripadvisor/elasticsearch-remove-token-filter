@@ -11,8 +11,6 @@ import java.io.IOException;
 public class RemoveTokenFilter extends TokenFilter {
 
     private final CharArraySet stopWords;
-    private boolean skippedPositions;
-
 
     private final PositionIncrementAttribute posIncrAtt = addAttribute(PositionIncrementAttribute.class);
     private final CharTermAttribute termAtt = addAttribute(CharTermAttribute.class);

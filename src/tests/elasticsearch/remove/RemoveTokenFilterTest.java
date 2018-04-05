@@ -15,7 +15,6 @@ import java.io.StringReader;
 
 import static org.elasticsearch.test.ESTestCase.createTestAnalysis;
 
-// TODO: add more tests for other languages
 
 public class RemoveTokenFilterTest extends ESTokenStreamTestCase {
 
