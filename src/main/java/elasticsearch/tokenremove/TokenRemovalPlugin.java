@@ -1,4 +1,4 @@
-package elasticsearch.remove;
+package elasticsearch.tokenremove;
 
 import org.elasticsearch.index.analysis.TokenFilterFactory;
 import org.elasticsearch.indices.analysis.AnalysisModule;

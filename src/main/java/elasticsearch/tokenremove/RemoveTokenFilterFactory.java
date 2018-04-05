@@ -1,4 +1,4 @@
-package elasticsearch.remove;
+package elasticsearch.tokenremove;
 
 import org.apache.lucene.analysis.CharArraySet;
 import org.apache.lucene.analysis.TokenStream;

@@ -1,4 +1,4 @@
-package elasticsearch.remove;
+package elasticsearch.tokenremove;
 
 import org.apache.lucene.analysis.BaseTokenStreamTestCase;
 import org.apache.lucene.analysis.TokenStream;
@@ -33,7 +33,7 @@ public class RemoveTokenFilterTest extends ESTokenStreamTestCase {
 
         tokenizer.setReader(new StringReader("hotels next to the eiffel tower"));
         tokenStream = filter.create(tokenizer);
-        // Make sure ever increment each token by 1 even when we remove multiple tokens adjacent to each other
+        // Make sure ever increment each token by 1 even when we tokenremove multiple tokens adjacent to each other
         // normal stop filter fails at this assert - ES version 5.4
         BaseTokenStreamTestCase.assertTokenStreamContents(tokenStream, new String[] { "hotels", "next", "eiffel", "tower" }, new int[]{0,7,19,26}, new int[]{6,11,25,31}, new int[]{1, 1, 1, 1});
 
@@ -71,7 +71,7 @@ public class RemoveTokenFilterTest extends ESTokenStreamTestCase {
 
         tokenizer.setReader(new StringReader("hötels près de la tour eiffel"));
         TokenStream tokenStream = filter.create(tokenizer);
-        // Make sure ever increment each token by 1 even when we remove multiple tokens adjacent to each other
+        // Make sure ever increment each token by 1 even when we tokenremove multiple tokens adjacent to each other
         // normal stop filter fails at this assert - ES version 5.4
         BaseTokenStreamTestCase.assertTokenStreamContents(tokenStream, new String[] { "hötels", "près", "tour", "eiffel" }, new int[]{0,7,18,23}, new int[]{6,11,22,29}, new int[]{1, 1, 1, 1});
     }

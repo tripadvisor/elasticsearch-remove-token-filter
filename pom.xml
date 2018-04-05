@@ -3,8 +3,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <name>elasticsearch-remove-stop-word</name>
     <modelVersion>4.0.0</modelVersion>
-    <groupId>elasticsearch.remove</groupId>
-    <artifactId>elasticsearch-remove</artifactId>
+    <groupId>elasticsearch.tokenremove</groupId>
+    <artifactId>elasticsearch-tokenremove</artifactId>
     <version>1.2.0</version>
     <packaging>jar</packaging>
     <description>A customized token filter that drops stop word tokens completely from the token stream including their token positions</description>
