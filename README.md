@@ -1,6 +1,6 @@
 # elasticsearch-remove-token-filter
 
-This is a customized stop filter plugin, compatible with ES 5.6.5. This stop filter completely removes stop word's 
+This is a customized stop filter plugin, compatible with ES 7.2.1. This stop filter completely removes stop word's 
 token position from the token stream whereas the ES build-in stop filter only removes the stop word token but preserves
  the stop word token position. The difference can be best illustrated with the following use case.
  

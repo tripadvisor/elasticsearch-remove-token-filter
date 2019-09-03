@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>elasticsearch.tokenremove</groupId>
     <artifactId>elasticsearch-tokenremove</artifactId>
-    <version>1.2.1</version>
+    <version>1.2.2</version>
     <packaging>jar</packaging>
     <description>A customized token filter that drops stop word tokens completely from the token stream including their token positions</description>
     <inceptionYear>2018</inceptionYear>
@@ -19,7 +19,7 @@
     </licenses>
 
     <properties>
-        <elasticsearch.version>5.6.5</elasticsearch.version>
+        <elasticsearch.version>7.2.1</elasticsearch.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <skipTests>false</skipTests>
         <skipUnitTests>${skipTests}</skipUnitTests>
